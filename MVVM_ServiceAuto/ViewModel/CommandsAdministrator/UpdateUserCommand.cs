@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MVVM_ServiceAuto.ViewModel.CommandsAdministrator
 {
-    internal class UpdateUserCommand
+    public class UpdateUserCommand
     {
     }
 }

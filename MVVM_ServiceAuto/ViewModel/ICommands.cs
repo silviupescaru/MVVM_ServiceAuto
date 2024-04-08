@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MVVM_ServiceAuto.ViewModel
 {
-    internal interface ICommands
+    public interface ICommands
     {
+        void Execute();
     }
 }
