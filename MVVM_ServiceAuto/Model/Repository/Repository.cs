@@ -11,7 +11,7 @@ namespace MVVM_ServiceAuto.Model.Repository
 
         public Repository()
         {
-            string s = "Data Source=DESKTOP-FAUD35Q\\SQLEXPRESS;Initial Catalog=ServiceAutoMVP_DB;Integrated Security=True;";
+            string s = "Data Source=DESKTOP-DV5NTJF\\SQLEXPRESS;Initial Catalog=ServiceAutoMVP_DB;Integrated Security=True;";
             //s += "";
             this.connection = new SqlConnection(s);
         }

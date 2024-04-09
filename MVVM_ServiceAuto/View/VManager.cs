@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MVVM_ServiceAuto.View
 {
-    public partial class LoginGUI : Form
+    public partial class VManager : Form
     {
-        public LoginGUI()
+        public VManager()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace MVVM_ServiceAuto.View
 {
-    partial class ManagerGUI
+    partial class VManager
     {
         /// <summary>
         /// Required designer variable.

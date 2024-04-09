@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 
 namespace MVVM_ServiceAuto.Model.Repository
 {
@@ -29,11 +30,10 @@ namespace MVVM_ServiceAuto.Model.Repository
             commandSQL += password + "'";
             DataTable userTable = this.repository.GetTable(commandSQL);
 
-            if(userTable != null || userTable.Rows.Count != 0)
+            if(userTable.Rows.Count != 0)
             {
                 return true;
             }
-
             return false;
         }
 

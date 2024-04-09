@@ -30,10 +30,10 @@ namespace MVVM_ServiceAuto.ViewModel
             this.role = "Administrator";
             this.Users = new DataTable();
             this.AddUser = new AddUserCommand(this);
-            this.UpdateUser = new UpdateUserCommand(this);
-            this.DeleteUser = new DeleteUserCommand(this);
-            this.ListUsers = new ListAllUsersCommand(this);
-            this.SearchByRole = new FilterByRoleCommand(this);
+            //this.UpdateUser = new UpdateUserCommand(this);
+            //this.DeleteUser = new DeleteUserCommand(this);
+            //this.ListUsers = new ListAllUsersCommand(this);
+            //this.SearchByRole = new FilterByRoleCommand(this);
         }
 
         public uint UserID
