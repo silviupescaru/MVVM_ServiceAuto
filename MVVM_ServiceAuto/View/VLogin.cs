@@ -17,7 +17,7 @@ namespace MVVM_ServiceAuto.View
         public VLogin()
         {
             InitializeComponent();
-            this.vm = new VMLogin();
+            this.vm = new VMLogin(this);
             this.textBoxUsername.DataBindings.Add("Text", this.vm, "username", false, DataSourceUpdateMode.OnValidation);
             this.textBoxPassword.DataBindings.Add("Text", this.vm, "password", false, DataSourceUpdateMode.OnValidation);
 

@@ -1,4 +1,5 @@
 ﻿using MVVM_ServiceAuto.ViewModel.CommandsLogin;
+using MVVM_ServiceAuto.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,13 +12,15 @@ namespace MVVM_ServiceAuto.ViewModel
     {
         private string username;
         private string password;
+        private VLogin _vLogin;
         public ICommands LoginUser;
 
-        public VMLogin()
+        public VMLogin(VLogin vLogin)
         {
             this.username = "";
             this.password = "";
-            this.LoginUser = new LoginCommand(this);
+            _vLogin = vLogin;
+            this.LoginUser = new LoginCommand(this, _vLogin);
         }
 
         public string Username

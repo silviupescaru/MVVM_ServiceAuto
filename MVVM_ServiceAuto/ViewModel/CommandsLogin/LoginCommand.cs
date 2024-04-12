@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MVVM_ServiceAuto.Model.Repository;
+using MVVM_ServiceAuto.View;
 using MVVM_ServiceAuto.ViewModel;
 using MVVM_ServiceAuto.ViewModel.CommandsLogin;
 
@@ -12,13 +13,15 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsLogin
 {
 
 
-    public class LoginCommand : ICommands
+    public class LoginCommand : Form, ICommands
     {
 
         private VMLogin vmLogin;
-        public LoginCommand(VMLogin vm) 
+        private VLogin _vLogin;
+        public LoginCommand(VMLogin vm, VLogin vLogin) 
         {
             this.vmLogin = vm;
+            _vLogin = vLogin;
         }
 
         public void Execute()
@@ -34,11 +37,15 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsLogin
                     bool successfulLogin = userRepository.LoginUser(username, password);
                     if (successfulLogin)
                     {
-                        //string role = userRepository.GetRole(username, password);
-                        //if (role.Equals("Employee"))
-                        //{
-                        //    showEmployeeGUI();
-                        //}
+                        string role = userRepository.GetRole(username, password);
+                        if (role.Equals("Employee"))
+                        {
+                            _vLogin.Hide();
+
+                            // Show the VEmployee form
+                            VEmployee vEmployee = new VEmployee();
+                            vEmployee.Show();
+                        }
                         //else if (role.Equals("Manager"))
                         //{
                         //    showManagerGUI();
@@ -47,7 +54,7 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsLogin
                         //{
                         //    showAdministratorGUI();
                         //}
-                        MessageBox.Show("Logged in successfully");
+                        //MessageBox.Show("Logged in successfully");
                     } else MessageBox.Show("Login failed!");
                 }
             } catch(Exception ex)
