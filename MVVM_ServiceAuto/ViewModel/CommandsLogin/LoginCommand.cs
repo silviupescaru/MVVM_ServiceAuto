@@ -42,18 +42,23 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsLogin
                         {
                             _vLogin.Hide();
 
-                            // Show the VEmployee form
                             VEmployee vEmployee = new VEmployee();
                             vEmployee.Show();
                         }
-                        //else if (role.Equals("Manager"))
-                        //{
-                        //    showManagerGUI();
-                        //}
-                        //else if (role.Equals("Administrator"))
-                        //{
-                        //    showAdministratorGUI();
-                        //}
+                        else if (role.Equals("Manager"))
+                        {
+                            _vLogin.Hide();
+
+                            VManager vManager = new VManager();
+                            vManager.Show();
+                        }
+                        else if (role.Equals("Administrator"))
+                        {
+                            _vLogin.Hide();
+
+                            VAdministrator vAdministrator = new VAdministrator();
+                            vAdministrator.Show();
+                        }
                         //MessageBox.Show("Logged in successfully");
                     } else MessageBox.Show("Login failed!");
                 }
