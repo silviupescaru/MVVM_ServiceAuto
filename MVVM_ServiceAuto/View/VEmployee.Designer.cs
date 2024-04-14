@@ -59,6 +59,10 @@
             fuel = new DataGridViewTextBoxColumn();
             labelLoggedIn = new Label();
             buttonLogout = new Button();
+            buttonSaveXML = new Button();
+            buttonSaveDOC = new Button();
+            buttonSaveCSV = new Button();
+            buttonSaveJSON = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDownCarID).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCarTable).BeginInit();
             SuspendLayout();
@@ -353,6 +357,46 @@
             buttonLogout.Text = "LOGOUT";
             buttonLogout.UseVisualStyleBackColor = true;
             // 
+            // buttonSaveXML
+            // 
+            buttonSaveXML.Font = new Font("Montserrat", 7.5F);
+            buttonSaveXML.Location = new Point(526, 159);
+            buttonSaveXML.Name = "buttonSaveXML";
+            buttonSaveXML.Size = new Size(75, 23);
+            buttonSaveXML.TabIndex = 26;
+            buttonSaveXML.Text = "SAVE XML";
+            buttonSaveXML.UseVisualStyleBackColor = true;
+            // 
+            // buttonSaveDOC
+            // 
+            buttonSaveDOC.Font = new Font("Montserrat", 7.5F);
+            buttonSaveDOC.Location = new Point(612, 159);
+            buttonSaveDOC.Name = "buttonSaveDOC";
+            buttonSaveDOC.Size = new Size(75, 23);
+            buttonSaveDOC.TabIndex = 25;
+            buttonSaveDOC.Text = "SAVE DOC";
+            buttonSaveDOC.UseVisualStyleBackColor = true;
+            // 
+            // buttonSaveCSV
+            // 
+            buttonSaveCSV.Font = new Font("Montserrat", 7.5F);
+            buttonSaveCSV.Location = new Point(526, 107);
+            buttonSaveCSV.Name = "buttonSaveCSV";
+            buttonSaveCSV.Size = new Size(75, 23);
+            buttonSaveCSV.TabIndex = 28;
+            buttonSaveCSV.Text = "SAVE CSV";
+            buttonSaveCSV.UseVisualStyleBackColor = true;
+            // 
+            // buttonSaveJSON
+            // 
+            buttonSaveJSON.Font = new Font("Montserrat", 7.5F);
+            buttonSaveJSON.Location = new Point(612, 107);
+            buttonSaveJSON.Name = "buttonSaveJSON";
+            buttonSaveJSON.Size = new Size(75, 23);
+            buttonSaveJSON.TabIndex = 27;
+            buttonSaveJSON.Text = "SAVE JSON";
+            buttonSaveJSON.UseVisualStyleBackColor = true;
+            // 
             // VEmployee
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -360,6 +404,10 @@
             BackgroundImage = Properties.Resources.employeeBG;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(822, 739);
+            Controls.Add(buttonSaveCSV);
+            Controls.Add(buttonSaveJSON);
+            Controls.Add(buttonSaveXML);
+            Controls.Add(buttonSaveDOC);
             Controls.Add(buttonLogout);
             Controls.Add(labelLoggedIn);
             Controls.Add(dataGridViewCarTable);
@@ -423,5 +471,9 @@
         private DataGridViewTextBoxColumn fuel;
         private Label labelLoggedIn;
         private Button buttonLogout;
+        private Button buttonSaveXML;
+        private Button buttonSaveDOC;
+        private Button buttonSaveCSV;
+        private Button buttonSaveJSON;
     }
 }
