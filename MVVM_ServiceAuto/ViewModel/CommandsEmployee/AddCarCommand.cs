@@ -41,10 +41,9 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsEmployee
                         vmEmployee.Brand = string.Empty;
                         vmEmployee.Color = string.Empty;
                         vmEmployee.Fuel = string.Empty;
-                        
-                        //_vEmployee
-                        this.iEmployeeGUI.ResetDgvCarTable();
-                        this.LoadCarTable();
+                        vmEmployee.Car.Rows.Clear();
+                        List<Car> list = carRepository.CarList();
+
                     }
                     else
                         this.iEmployeeGUI.SetMessage("Failure!", "Adding was ended with failure!");

@@ -20,7 +20,13 @@ namespace MVVM_ServiceAuto.View
         {
             InitializeComponent();
             this.vm = new VMEmployee(this);
-            this.dataGridViewCarTable
+
+            this.numericUpDownCarID.DataBindings.Add("Text", this.vm, "carID", false, DataSourceUpdateMode.OnValidation);
+            this.textBoxOwner.DataBindings.Add("Text", this.vm, "owner", false, DataSourceUpdateMode.OnValidation);
+            this.textBoxBrand.DataBindings.Add("Text", this.vm, "brand", false, DataSourceUpdateMode.OnValidation);
+            this.textBoxColor.DataBindings.Add("Text", this.vm, "color", false, DataSourceUpdateMode.OnValidation);
+            this.comboBoxFuel.DataBindings.Add("Text", this.vm, "fuel", false, DataSourceUpdateMode.OnValidation);
+            this.dataGridViewCarTable.DataSource = this.vm.Car;
         }
     }
 }

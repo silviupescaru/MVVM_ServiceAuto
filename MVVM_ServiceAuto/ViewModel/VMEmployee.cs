@@ -2,6 +2,7 @@
 using MVVM_ServiceAuto.ViewModel.CommandsEmployee;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,7 @@ namespace MVVM_ServiceAuto.ViewModel
         private string brand;
         private string color;
         private string fuel;
+        public DataTable Car;
         private VEmployee vEmployee;
         public ICommands AddCar, UpdateCar, DeleteCar, FilterBy;
         public ICommands OrderBy, ListAll, Logout, SaveCSV;
@@ -27,8 +29,9 @@ namespace MVVM_ServiceAuto.ViewModel
             this.brand = string.Empty;
             this.color = string.Empty;
             this.fuel = string.Empty;
+            this.Car = new DataTable();
             this.vEmployee = vEmployee;
-            this.AddCar = new AddCarCommand();
+            this.AddCar = new AddCarCommand(this, vEmployee);
             this.UpdateCar = new UpdateCarCommand();
             this.DeleteCar = new DeleteCarCommand();
             this.FilterBy = new FilterByCarCommand();
