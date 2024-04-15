@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5R0Fs0DDqlKHjLuFMZfEslJRfiukvmoE6OQXRHTjjETeHAq5LBUCk0syJzwmi731sVeDAgQy4zlcaIBc82EWsg==",
+  "dgSpecHash": "5Q1PccHB1KJCmEAxOz9PwUnh9Axp7DSQvJ1LBX3khGm6po4Cz4TjEHgg9/OTQ+lFraxv26aOquXhe2z+rcBR4A==",
   "success": true,
-  "projectFilePath": "E:\\Facultate\\III\\PS\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj",
+  "projectFilePath": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mike\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\mike\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
