@@ -15,6 +15,7 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsEmployee
 
         private VMEmployee vmEmployee;
         private VEmployee _vEmployee;
+        CarRepository carRepository = new CarRepository();
 
         public AddCarCommand(VMEmployee vmEmployee, VEmployee vEmployee)
         {
@@ -24,7 +25,6 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsEmployee
 
         public void Execute()
         {
-            CarRepository carRepository = new CarRepository();
 
             try
             {
@@ -34,8 +34,15 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsEmployee
                     bool result = this.carRepository.AddCar(car);
                     if (result)
                     {
-                        this.iEmployeeGUI.SetMessage("Success!", "Adding was completed successfully!");
-                        this.resetDoctorControls();
+                        //this.iEmployeeGUI.SetMessage("Success!", "Adding was completed successfully!");
+                        //this.resetDoctorControls();
+                        vmEmployee.CarID = 1;
+                        vmEmployee.Owner = string.Empty;
+                        vmEmployee.Brand = string.Empty;
+                        vmEmployee.Color = string.Empty;
+                        vmEmployee.Fuel = string.Empty;
+                        
+                        //_vEmployee
                         this.iEmployeeGUI.ResetDgvCarTable();
                         this.LoadCarTable();
                     }

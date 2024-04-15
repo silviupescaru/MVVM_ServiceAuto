@@ -20,7 +20,7 @@ namespace MVVM_ServiceAuto.View
         {
             InitializeComponent();
             this.vm = new VMEmployee(this);
-
+            this.dataGridViewCarTable
         }
     }
 }
