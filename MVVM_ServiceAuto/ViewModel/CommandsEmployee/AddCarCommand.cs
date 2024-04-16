@@ -24,6 +24,8 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsEmployee
             _vEmployee = vEmployee;
         }
 
+        public void Execute(int dontCare) { }
+
         public void Execute()
         {
 

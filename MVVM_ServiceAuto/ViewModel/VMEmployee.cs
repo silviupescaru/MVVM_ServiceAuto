@@ -35,7 +35,7 @@ namespace MVVM_ServiceAuto.ViewModel
             this.Car = repository.GetTable("SELECT * FROM [Car]");
             this.vEmployee = vEmployee;
             this.AddCar = new AddCarCommand(this, vEmployee);
-            //this.UpdateCar = new UpdateCarCommand();
+            this.UpdateCar = new UpdateCarCommand(this, vEmployee);
             //this.DeleteCar = new DeleteCarCommand();
             //this.FilterBy = new FilterByCarCommand();
             //this.OrderBy = new OrderByCarCommand();

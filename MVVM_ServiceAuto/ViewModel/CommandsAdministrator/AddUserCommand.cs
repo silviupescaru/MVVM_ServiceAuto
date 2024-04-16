@@ -16,6 +16,8 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsAdministrator
             this.vmAdministrator = vmAdministrator;
         }
 
+        public void Execute(int dontCare) { }
+
         public void Execute()
         {
             UserRepository userRepository = new UserRepository();

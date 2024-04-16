@@ -9,5 +9,7 @@ namespace MVVM_ServiceAuto.ViewModel
     public interface ICommands
     {
         void Execute();
+
+        void Execute(int parameter);
     }
 }

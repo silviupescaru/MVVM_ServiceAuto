@@ -13,7 +13,6 @@ namespace MVVM_ServiceAuto.View
 {
     public partial class VEmployee : Form
     {
-
         private VMEmployee vm;
 
         public VEmployee()
@@ -29,6 +28,28 @@ namespace MVVM_ServiceAuto.View
             this.dataGridViewCarTable.DataSource = this.vm.Car;
 
             this.buttonAdd.Click += delegate { vm.AddCar.Execute(); this.dataGridViewCarTable.DataSource = this.vm.Car; };
+
+            this.dataGridViewCarTable.SelectionChanged += DataGridViewCarTable_SelectionChanged;
+
+            this.buttonUpdate.Click += delegate { int selectedCar = dataGridViewCarTable.SelectedRows.Count; vm.UpdateCar.Execute(selectedCar); this.dataGridViewCarTable.DataSource = this.vm.Car; };
+        }
+
+        private void DataGridViewCarTable_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridViewCarTable.SelectedRows.Count > 0) // make sure user select at least 1 row 
+            {
+                string owner = dataGridViewCarTable.SelectedRows[0].Cells["Owner"].Value + string.Empty;
+                string brand = dataGridViewCarTable.SelectedRows[0].Cells["Brand"].Value + string.Empty;
+                string color = dataGridViewCarTable.SelectedRows[0].Cells["Color"].Value + string.Empty;
+                string fuel = dataGridViewCarTable.SelectedRows[0].Cells["Fuel"].Value + string.Empty;
+                int carID = int.Parse(dataGridViewCarTable.SelectedRows[0].Cells["CarID"].Value + string.Empty);
+
+                textBoxOwner.Text = owner;
+                textBoxBrand.Text = brand;
+                textBoxColor.Text = color;
+                comboBoxFuel.SelectedItem = fuel;
+                numericUpDownCarID.Value = carID;
+            }
         }
     }
 }

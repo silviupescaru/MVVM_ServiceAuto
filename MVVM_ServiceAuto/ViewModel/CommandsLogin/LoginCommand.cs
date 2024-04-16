@@ -24,6 +24,8 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsLogin
             _vLogin = vLogin;
         }
 
+        public void Execute(int dontCare) { }
+
         public void Execute()
         {
             UserRepository userRepository = new UserRepository();
