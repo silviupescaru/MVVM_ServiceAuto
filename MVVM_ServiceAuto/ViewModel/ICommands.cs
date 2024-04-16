@@ -11,5 +11,7 @@ namespace MVVM_ServiceAuto.ViewModel
         void Execute();
 
         void Execute(int parameter);
+
+        void Execute(string parameter); 
     }
 }

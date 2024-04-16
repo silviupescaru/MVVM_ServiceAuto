@@ -23,76 +23,35 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsEmployee
         }
 
         public void Execute() { }
+        public void Execute(int dontCare) { }
 
-        public void Execute(int selectedCar)
+        public void Execute(string selectedOption)
         {
 
             try
             {
-                vmEmployee.Car.Rows.Clear();
-                string selectedOption = this.iEmployeeGUI.GetSelectedCriterion();
+                if(vmEmployee.Car != null)
+                    vmEmployee.Car.Rows.Clear();
                 if (selectedOption != null && selectedOption.Length > 0)
                 {
-                    if (selectedOption.ToUpper() == "ALL")
+                    if (selectedOption.ToUpper() == "NONE")
                     {
-                        this.iEmployeeGUI.SetVisibility(true);
-                        this.allCars();
+                        //this.allCars();
+                        vmEmployee.Car = repository.GetTable("SELECT * FROM [Car]");
                     }
-                    else if (selectedOption.ToUpper() == "FILTER BY BRAND AND FUEL")
+                    else if (selectedOption.ToUpper() == "BRAND AND FUEL")
                     {
-                        this.iEmployeeGUI.SetVisibility(true);
-                        this.CarFilterByBrandFuel();
+                        //this.CarFilterByBrandFuel();
+                        vmEmployee.Car = repository.GetTable("SELECT * FROM [Car] ORDER BY [brand], [fuel];");
                     }
 
                 }
-                else
-                    this.iEmployeeGUI.SetVisibility(true);
             }
             catch (Exception exception)
             {
-                this.iEmployeeGUI.SetMessage("Cars - Exception", exception.ToString());
+                MessageBox.Show(exception.ToString());
             }
 
-        }
-
-        private Car validInformation()
-        {
-            uint id = vmEmployee.CarID;
-            Debug.Print("Car ID: " + id);
-            if (id == 0)
-            {
-                MessageBox.Show("Car ID must be non-zero natural number!");
-                return null;
-            }
-            string owner = vmEmployee.Owner;
-            Debug.Print("Car Owner: " + owner);
-            if (owner == null || owner.Length == 0)
-            {
-                MessageBox.Show("Car Owner is empty!");
-                return null;
-            }
-            string brand = vmEmployee.Brand;
-            Debug.Print("Car Brand: " + brand);
-            if (brand == null || brand.Length == 0)
-            {
-                MessageBox.Show("Car Brand is empty!");
-                return null;
-            }
-            string color = vmEmployee.Color;
-            Debug.Print("Car Color: " + color);
-            if (color == null || color.Length == 0)
-            {
-                MessageBox.Show("Car Color is empty");
-                return null;
-            }
-            string fuel = vmEmployee.Fuel;
-            Debug.Print("Car Fuel: " + fuel);
-            if (fuel == null || fuel.Length == 0)
-            {
-                MessageBox.Show("Car Fuel is empty");
-                return null;
-            }
-            return new Car(id, owner, brand, color, fuel);
         }
     }
 }

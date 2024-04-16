@@ -25,6 +25,7 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsEmployee
         }
 
         public void Execute() { }
+        public void Execute(string dontCare) { }
 
         public void Execute(int selectedCar)
         {

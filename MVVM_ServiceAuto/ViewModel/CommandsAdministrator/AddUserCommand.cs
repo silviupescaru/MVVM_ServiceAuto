@@ -17,6 +17,7 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsAdministrator
         }
 
         public void Execute(int dontCare) { }
+        public void Execute(string dontCare) { }
 
         public void Execute()
         {

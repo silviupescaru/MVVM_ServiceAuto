@@ -25,6 +25,7 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsLogin
         }
 
         public void Execute(int dontCare) { }
+        public void Execute(string dontCare) { }
 
         public void Execute()
         {

@@ -240,6 +240,7 @@
             comboBoxCarFilter.Name = "comboBoxCarFilter";
             comboBoxCarFilter.Size = new Size(151, 24);
             comboBoxCarFilter.TabIndex = 17;
+            comboBoxCarFilter.SelectedIndexChanged += comboBoxCarFilter_SelectedIndexChanged;
             // 
             // comboBoxFilterBy
             // 
