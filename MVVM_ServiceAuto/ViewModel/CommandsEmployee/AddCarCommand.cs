@@ -10,18 +10,16 @@ using MVVM_ServiceAuto.View;
 
 namespace MVVM_ServiceAuto.ViewModel.CommandsEmployee
 {
-    public class AddCarCommand : Form, ICommands
+    public class AddCarCommand : ICommands
     {
 
         private VMEmployee vmEmployee;
-        private VEmployee _vEmployee;
         CarRepository carRepository = new CarRepository();
         Repository repository = new Repository();
 
-        public AddCarCommand(VMEmployee vmEmployee, VEmployee vEmployee)
+        public AddCarCommand(VMEmployee vmEmployee)
         {
             this.vmEmployee = vmEmployee;
-            _vEmployee = vEmployee;
         }
 
         public void Execute(int dontCare) { }

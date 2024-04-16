@@ -37,11 +37,11 @@ namespace MVVM_ServiceAuto.ViewModel
             this.repository = new Repository();
             this.Car = repository.GetTable("SELECT * FROM [Car]");
             this.vEmployee = vEmployee;
-            this.AddCar = new AddCarCommand(this, vEmployee);
-            this.UpdateCar = new UpdateCarCommand(this, vEmployee);
-            //this.DeleteCar = new DeleteCarCommand();
-            //this.FilterBy = new FilterByCarCommand();
-            //this.OrderBy = new OrderByCarCommand();
+            this.AddCar = new AddCarCommand(this);
+            this.UpdateCar = new UpdateCarCommand(this);
+            this.DeleteCar = new DeleteCarCommand(this);
+            //this.FilterBy = new FilterByCarCommand(this);
+            this.OrderBy = new OrderByCarCommand(this);
             //this.ListAll = new ListAllCarCommand();
             //this.SearchBy = new SearchByOwnerCommand();
             //this.Logout = new LogoutEmployeeCommand();

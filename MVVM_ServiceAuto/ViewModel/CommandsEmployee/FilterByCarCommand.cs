@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MVVM_ServiceAuto.ViewModel.CommandsEmployee
 {
-    internal class FilterByCarCommand
+    public class FilterByCarCommand
     {
     }
 }

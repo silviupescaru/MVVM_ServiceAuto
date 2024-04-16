@@ -25,6 +25,7 @@ namespace MVVM_ServiceAuto.View
             this.textBoxBrand.DataBindings.Add("Text", this.vm, "Brand", false, DataSourceUpdateMode.OnPropertyChanged);
             this.textBoxColor.DataBindings.Add("Text", this.vm, "Color", false, DataSourceUpdateMode.OnPropertyChanged);
             this.comboBoxFuel.DataBindings.Add("Text", this.vm, "Fuel", false, DataSourceUpdateMode.OnPropertyChanged);
+            this.comboBoxCarFilter.DataBindings.Add("Text", this.vm, "OrderBy", false, DataSourceUpdateMode.OnValidation);
             this.dataGridViewCarTable.DataSource = this.vm.Car;
 
             this.buttonAdd.Click += delegate { vm.AddCar.Execute(); this.dataGridViewCarTable.DataSource = this.vm.Car; };
@@ -32,6 +33,9 @@ namespace MVVM_ServiceAuto.View
             this.dataGridViewCarTable.SelectionChanged += DataGridViewCarTable_SelectionChanged;
 
             this.buttonUpdate.Click += delegate { int selectedCar = dataGridViewCarTable.SelectedRows.Count; vm.UpdateCar.Execute(selectedCar); this.dataGridViewCarTable.DataSource = this.vm.Car; };
+            this.buttonDelete.Click += delegate { int selectedCar = dataGridViewCarTable.SelectedRows.Count; vm.DeleteCar.Execute(selectedCar); this.dataGridViewCarTable.DataSource = this.vm.Car; };
+            this.comboBoxCarFilter.SelectedIndexChanged += delegate { vm.OrderBy.Execute(); this.dataGridViewCarTable.DataSource = this.vm.Car; };
+
         }
 
         private void DataGridViewCarTable_SelectionChanged(object sender, EventArgs e)
