@@ -20,11 +20,11 @@ namespace MVVM_ServiceAuto.View
             InitializeComponent();
             this.vm = new VMEmployee(this);
 
-            this.numericUpDownCarID.DataBindings.Add("Text", this.vm, "CarID", false, DataSourceUpdateMode.OnValidation);
-            this.textBoxOwner.DataBindings.Add("Text", this.vm, "Owner", false, DataSourceUpdateMode.OnValidation);
-            this.textBoxBrand.DataBindings.Add("Text", this.vm, "Brand", false, DataSourceUpdateMode.OnValidation);
-            this.textBoxColor.DataBindings.Add("Text", this.vm, "Color", false, DataSourceUpdateMode.OnValidation);
-            this.comboBoxFuel.DataBindings.Add("Text", this.vm, "Fuel", false, DataSourceUpdateMode.OnValidation);
+            this.numericUpDownCarID.DataBindings.Add("Text", this.vm, "CarID", false, DataSourceUpdateMode.OnPropertyChanged);
+            this.textBoxOwner.DataBindings.Add("Text", this.vm, "Owner", false, DataSourceUpdateMode.OnPropertyChanged);
+            this.textBoxBrand.DataBindings.Add("Text", this.vm, "Brand", false, DataSourceUpdateMode.OnPropertyChanged);
+            this.textBoxColor.DataBindings.Add("Text", this.vm, "Color", false, DataSourceUpdateMode.OnPropertyChanged);
+            this.comboBoxFuel.DataBindings.Add("Text", this.vm, "Fuel", false, DataSourceUpdateMode.OnPropertyChanged);
             this.dataGridViewCarTable.DataSource = this.vm.Car;
 
             this.buttonAdd.Click += delegate { vm.AddCar.Execute(); this.dataGridViewCarTable.DataSource = this.vm.Car; };

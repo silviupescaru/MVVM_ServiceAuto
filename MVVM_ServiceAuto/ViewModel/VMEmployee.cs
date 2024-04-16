@@ -7,10 +7,11 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace MVVM_ServiceAuto.ViewModel
 {
-    public class VMEmployee
+    public class VMEmployee : INotifyPropertyChanged
     {
         private uint carID;
         private string owner;
@@ -23,6 +24,8 @@ namespace MVVM_ServiceAuto.ViewModel
         public ICommands AddCar, UpdateCar, DeleteCar, FilterBy;
         public ICommands OrderBy, ListAll, Logout, SaveCSV;
         public ICommands SaveJSON, SaveXML, SaveDOC, SearchBy;
+
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         public VMEmployee(VEmployee vEmployee) 
         {
@@ -51,31 +54,36 @@ namespace MVVM_ServiceAuto.ViewModel
         public uint CarID 
         {
             get { return carID; } 
-            set { carID = value; } 
+            set { carID = value; OnPropertyChanged(nameof(CarID)); } 
         }
 
         public string Owner
         {
             get { return owner; }
-            set { owner = value; }
+            set { owner = value; OnPropertyChanged(nameof(Owner)); }
         }
 
         public string Brand
         {
             get { return brand; }
-            set { brand = value; }
+            set { brand = value; OnPropertyChanged(nameof(Brand)); }
         }
 
         public string Color
         {
             get { return color; }
-            set { color = value; }
+            set { color = value; OnPropertyChanged(nameof(Color)); }
         }
 
         public string Fuel
         {
             get { return fuel; }
-            set { fuel = value; }
+            set { fuel = value; OnPropertyChanged(nameof(Fuel)); }
+        }
+
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
     }
