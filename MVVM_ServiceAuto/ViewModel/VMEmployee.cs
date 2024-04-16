@@ -1,5 +1,6 @@
 ﻿using MVVM_ServiceAuto.View;
 using MVVM_ServiceAuto.ViewModel.CommandsEmployee;
+using MVVM_ServiceAuto.Model.Repository;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -18,6 +19,7 @@ namespace MVVM_ServiceAuto.ViewModel
         private string fuel;
         public DataTable Car;
         private VEmployee vEmployee;
+        private Repository repository;
         public ICommands AddCar, UpdateCar, DeleteCar, FilterBy;
         public ICommands OrderBy, ListAll, Logout, SaveCSV;
         public ICommands SaveJSON, SaveXML, SaveDOC, SearchBy;
@@ -29,20 +31,21 @@ namespace MVVM_ServiceAuto.ViewModel
             this.brand = string.Empty;
             this.color = string.Empty;
             this.fuel = string.Empty;
-            this.Car = new DataTable();
+            this.repository = new Repository();
+            this.Car = repository.GetTable("SELECT * FROM [Car]");
             this.vEmployee = vEmployee;
             this.AddCar = new AddCarCommand(this, vEmployee);
-            this.UpdateCar = new UpdateCarCommand();
-            this.DeleteCar = new DeleteCarCommand();
-            this.FilterBy = new FilterByCarCommand();
-            this.OrderBy = new OrderByCarCommand();
-            this.ListAll = new ListAllCarCommand();
-            this.SearchBy = new SearchByOwnerCommand();
-            this.Logout = new LogoutEmployeeCommand();
-            this.SaveCSV = new SaveCSVCommand();
-            this.SaveXML = new SaveXMLCommand();
-            this.SaveJSON = new SaveJSONCommand();
-            this.SaveDOC = new SaveDOCCommand();
+            //this.UpdateCar = new UpdateCarCommand();
+            //this.DeleteCar = new DeleteCarCommand();
+            //this.FilterBy = new FilterByCarCommand();
+            //this.OrderBy = new OrderByCarCommand();
+            //this.ListAll = new ListAllCarCommand();
+            //this.SearchBy = new SearchByOwnerCommand();
+            //this.Logout = new LogoutEmployeeCommand();
+            //this.SaveCSV = new SaveCSVCommand();
+            //this.SaveXML = new SaveXMLCommand();
+            //this.SaveJSON = new SaveJSONCommand();
+            //this.SaveDOC = new SaveDOCCommand();
         }
 
         public uint CarID 

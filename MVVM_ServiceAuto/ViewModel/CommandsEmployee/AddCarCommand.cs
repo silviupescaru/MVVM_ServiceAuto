@@ -16,6 +16,7 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsEmployee
         private VMEmployee vmEmployee;
         private VEmployee _vEmployee;
         CarRepository carRepository = new CarRepository();
+        Repository repository = new Repository();
 
         public AddCarCommand(VMEmployee vmEmployee, VEmployee vEmployee)
         {
@@ -29,68 +30,71 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsEmployee
             try
             {
                 Car car = this.validInformation();
+
                 if (car != null)
                 {
                     bool result = this.carRepository.AddCar(car);
-                    if (result)
+                    if (result == true)
                     {
-                        //this.iEmployeeGUI.SetMessage("Success!", "Adding was completed successfully!");
-                        //this.resetDoctorControls();
+                        MessageBox.Show("Adding was successful!");
                         vmEmployee.CarID = 1;
                         vmEmployee.Owner = string.Empty;
                         vmEmployee.Brand = string.Empty;
                         vmEmployee.Color = string.Empty;
                         vmEmployee.Fuel = string.Empty;
                         vmEmployee.Car.Rows.Clear();
-                        List<Car> list = carRepository.CarList();
+                        vmEmployee.Car = repository.GetTable("SELECT * FROM [Car]");
 
-                    }
-                    else
-                        this.iEmployeeGUI.SetMessage("Failure!", "Adding was ended with failure!");
+                        if (vmEmployee.Car == null)
+                            MessageBox.Show("There is no car in your table!");
+
+                    } else MessageBox.Show("Adding was ended with failure!");
                 }
             }
             catch (Exception exception)
             {
-                this.iEmployeeGUI.SetMessage("Add - Exception", exception.ToString());
+                //if(result)
+                MessageBox.Show(exception.ToString());
+                Debug.WriteLine(exception.ToString());
             }
 
         }
 
         private Car validInformation()
         {
-            uint id = this.iEmployeeGUI.GetCarID();
+            uint id = vmEmployee.CarID;
             Debug.Print("Car ID: " + id);
             if (id == 0)
             {
-                this.iEmployeeGUI.SetMessage("Incomplete information!", "Car ID must be non-zero natural number!");
+                MessageBox.Show("Car ID must be non-zero natural number!");
                 return null;
             }
-            string owner = this.iEmployeeGUI.GetOwner();
+            string owner = vmEmployee.Owner;
             Debug.Print("Car Owner: " + owner);
             if (owner == null || owner.Length == 0)
             {
-                this.iEmployeeGUI.SetMessage("Incomplete information!", "Car Owner is empty!");
+                MessageBox.Show("Car Owner is empty!");
                 return null;
             }
-            string brand = this.iEmployeeGUI.GetBrand();
+            string brand = vmEmployee.Brand;
             Debug.Print("Car Brand: " + brand);
             if (brand == null || brand.Length == 0)
             {
-                this.iEmployeeGUI.SetMessage("Incomplete information!", "Car Brand is empty!");
+                MessageBox.Show("Car Brand is empty!");
                 return null;
             }
-            string color = this.iEmployeeGUI.GetColor();
+            string color = vmEmployee.Color;
             Debug.Print("Car Color: " + color);
             if (color == null || color.Length == 0)
             {
-                this.iEmployeeGUI.SetMessage("Incomplete information!", "Car Color is empty");
+                MessageBox.Show("Car Color is empty");
                 return null;
             }
-            string fuel = this.iEmployeeGUI.GetFuel();
+            string fuel = vmEmployee.Fuel;
             Debug.Print("Car Fuel: " + fuel);
             if (fuel == null || fuel.Length == 0)
             {
-                this.iEmployeeGUI.SetMessage("Incomplete information!", "Car Fuel is empty");
+                MessageBox.Show("Car Fuel is empty");
                 return null;
             }
             return new Car(id, owner, brand, color, fuel);

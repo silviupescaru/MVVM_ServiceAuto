@@ -52,11 +52,6 @@
             buttonSearch = new Button();
             buttonViewAll = new Button();
             dataGridViewCarTable = new DataGridView();
-            carID = new DataGridViewTextBoxColumn();
-            owner = new DataGridViewTextBoxColumn();
-            brand = new DataGridViewTextBoxColumn();
-            color = new DataGridViewTextBoxColumn();
-            fuel = new DataGridViewTextBoxColumn();
             labelLoggedIn = new Label();
             buttonLogout = new Button();
             buttonSaveXML = new Button();
@@ -296,7 +291,6 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridViewCarTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCarTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCarTable.Columns.AddRange(new DataGridViewColumn[] { carID, owner, brand, color, fuel });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Montserrat", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -309,31 +303,6 @@
             dataGridViewCarTable.Name = "dataGridViewCarTable";
             dataGridViewCarTable.Size = new Size(690, 317);
             dataGridViewCarTable.TabIndex = 22;
-            // 
-            // carID
-            // 
-            carID.HeaderText = "Car ID";
-            carID.Name = "carID";
-            // 
-            // owner
-            // 
-            owner.HeaderText = "Owner";
-            owner.Name = "owner";
-            // 
-            // brand
-            // 
-            brand.HeaderText = "Brand";
-            brand.Name = "brand";
-            // 
-            // color
-            // 
-            color.HeaderText = "Color";
-            color.Name = "color";
-            // 
-            // fuel
-            // 
-            fuel.HeaderText = "Fuel";
-            fuel.Name = "fuel";
             // 
             // labelLoggedIn
             // 
@@ -464,11 +433,6 @@
         private Button buttonSearch;
         private Button buttonViewAll;
         private DataGridView dataGridViewCarTable;
-        private DataGridViewTextBoxColumn carID;
-        private DataGridViewTextBoxColumn owner;
-        private DataGridViewTextBoxColumn brand;
-        private DataGridViewTextBoxColumn color;
-        private DataGridViewTextBoxColumn fuel;
         private Label labelLoggedIn;
         private Button buttonLogout;
         private Button buttonSaveXML;
