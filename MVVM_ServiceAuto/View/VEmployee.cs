@@ -35,7 +35,7 @@ namespace MVVM_ServiceAuto.View
 
             this.buttonUpdate.Click += delegate { int selectedCar = dataGridViewCarTable.SelectedRows.Count; vm.UpdateCar.Execute(selectedCar); this.dataGridViewCarTable.DataSource = this.vm.Car; };
             this.buttonDelete.Click += delegate { int selectedCar = dataGridViewCarTable.SelectedRows.Count; vm.DeleteCar.Execute(selectedCar); this.dataGridViewCarTable.DataSource = this.vm.Car; };
-            this.buttonSearch.Click += delegate { string searchedOwner = textBoxSearchBar.Text; Debug.WriteLine(searchedOwner); vm.SearchBy.Execute(searchedOwner); this.dataGridViewCarTable.DataSource = this.vm.Car; };
+            this.buttonSearch.Click += delegate { string searchedOwner = textBoxSearchBar.Text; vm.SearchBy.Execute(searchedOwner); this.dataGridViewCarTable.DataSource = this.vm.Car; };
             this.buttonViewAll.Click += delegate { vm.ListAll.Execute(); this.dataGridViewCarTable.DataSource = this.vm.Car; };
             this.buttonLogout.Click += delegate { vm.Logout.Execute(); };
 

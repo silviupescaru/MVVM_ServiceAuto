@@ -30,9 +30,10 @@ namespace MVVM_ServiceAuto.View
 
             this.buttonAdd.Click += delegate { vm.AddUser.Execute(); this.dataGridViewUsers.DataSource = this.vm.Users; };
             this.buttonUpdate.Click += delegate { int selectedUser = dataGridViewUsers.SelectedRows.Count; vm.UpdateUser.Execute(selectedUser); this.dataGridViewUsers.DataSource = this.vm.Users; };
+            this.buttonDelete.Click += delegate { vm.DeleteUser.Execute(); this.dataGridViewUsers.DataSource = this.vm.Users; };
+            this.buttonViewAll.Click += delegate { vm.ListUsers.Execute(); this.dataGridViewUsers.DataSource = this.vm.Users; };
+            this.buttonSearch.Click += delegate { string searchedRole = textBoxSearch.Text;  vm.SearchByRole.Execute(searchedRole); this.dataGridViewUsers.DataSource = this.vm.Users; };
 
-        
-        
         }
 
         private void DataGridViewUsers_SelectionChanged(object sender, EventArgs e)

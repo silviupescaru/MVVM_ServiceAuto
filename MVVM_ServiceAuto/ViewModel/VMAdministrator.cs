@@ -27,6 +27,7 @@ namespace MVVM_ServiceAuto.ViewModel
         public ICommands DeleteUser;
         public ICommands ListUsers;
         public ICommands SearchByRole;
+        public ICommands Logout;
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
@@ -41,9 +42,10 @@ namespace MVVM_ServiceAuto.ViewModel
             this.vAdministrator = vAdministrator;
             this.AddUser = new AddUserCommand(this);
             this.UpdateUser = new UpdateUserCommand(this);
-            //this.DeleteUser = new DeleteUserCommand(this);
-            //this.ListUsers = new ListAllUsersCommand(this);
-            //this.SearchByRole = new FilterByRoleCommand(this);
+            this.DeleteUser = new DeleteUserCommand(this);
+            this.ListUsers = new ListAllUsersCommand(this);
+            this.SearchByRole = new FilterByRoleCommand(this);
+            //this.Logout = new LogoutAdministratorCommand(this);
         }
 
         public uint UserID

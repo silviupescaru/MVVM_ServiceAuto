@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             labelUserID = new Label();
             labelRole = new Label();
             labelPassword = new Label();
@@ -42,7 +42,7 @@
             textBoxRole = new TextBox();
             textBoxPassword = new TextBox();
             labelSearch = new Label();
-            textBox1 = new TextBox();
+            textBoxSearch = new TextBox();
             buttonViewAll = new Button();
             buttonSearch = new Button();
             dataGridViewUsers = new DataGridView();
@@ -171,17 +171,17 @@
             labelSearch.ForeColor = Color.White;
             labelSearch.Location = new Point(506, 147);
             labelSearch.Name = "labelSearch";
-            labelSearch.Size = new Size(281, 27);
+            labelSearch.Size = new Size(138, 27);
             labelSearch.TabIndex = 11;
-            labelSearch.Text = "Search Username or Role";
+            labelSearch.Text = "Search Role";
             // 
-            // textBox1
+            // textBoxSearch
             // 
-            textBox1.Font = new Font("Montserrat", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(511, 180);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(302, 22);
-            textBox1.TabIndex = 12;
+            textBoxSearch.Font = new Font("Montserrat", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxSearch.Location = new Point(511, 180);
+            textBoxSearch.Name = "textBoxSearch";
+            textBoxSearch.Size = new Size(302, 22);
+            textBoxSearch.TabIndex = 12;
             // 
             // buttonViewAll
             // 
@@ -206,23 +206,23 @@
             // dataGridViewUsers
             // 
             dataGridViewUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Montserrat SemiBold", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridViewUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Montserrat SemiBold", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridViewUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Montserrat", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridViewUsers.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Montserrat", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dataGridViewUsers.DefaultCellStyle = dataGridViewCellStyle4;
             dataGridViewUsers.Location = new Point(59, 296);
             dataGridViewUsers.Name = "dataGridViewUsers";
             dataGridViewUsers.Size = new Size(754, 319);
@@ -262,7 +262,7 @@
             Controls.Add(dataGridViewUsers);
             Controls.Add(buttonSearch);
             Controls.Add(buttonViewAll);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxSearch);
             Controls.Add(labelSearch);
             Controls.Add(textBoxPassword);
             Controls.Add(textBoxRole);
@@ -297,7 +297,7 @@
         private TextBox textBoxRole;
         private TextBox textBoxPassword;
         private Label labelSearch;
-        private TextBox textBox1;
+        private TextBox textBoxSearch;
         private Button buttonViewAll;
         private Button buttonSearch;
         private DataGridView dataGridViewUsers;
