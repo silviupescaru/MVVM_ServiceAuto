@@ -40,7 +40,7 @@ namespace MVVM_ServiceAuto.ViewModel
             this.AddCar = new AddCarCommand(this);
             this.UpdateCar = new UpdateCarCommand(this);
             this.DeleteCar = new DeleteCarCommand(this);
-            //this.FilterBy = new FilterByCarCommand(this);
+            this.FilterBy = new FilterByCarCommand(this);
             this.OrderBy = new OrderByCarCommand(this);
             //this.ListAll = new ListAllCarCommand();
             //this.SearchBy = new SearchByOwnerCommand();

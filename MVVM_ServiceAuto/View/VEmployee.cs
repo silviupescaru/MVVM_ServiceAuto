@@ -35,7 +35,7 @@ namespace MVVM_ServiceAuto.View
             this.buttonUpdate.Click += delegate { int selectedCar = dataGridViewCarTable.SelectedRows.Count; vm.UpdateCar.Execute(selectedCar); this.dataGridViewCarTable.DataSource = this.vm.Car; };
             this.buttonDelete.Click += delegate { int selectedCar = dataGridViewCarTable.SelectedRows.Count; vm.DeleteCar.Execute(selectedCar); this.dataGridViewCarTable.DataSource = this.vm.Car; };
 
-            
+
             //this.comboBoxCarFilter.SelectedIndexChanged += delegate { vm.OrderBy.Execute(selectedOrderOption); this.dataGridViewCarTable.DataSource = this.vm.Car; };
 
         }
@@ -61,7 +61,14 @@ namespace MVVM_ServiceAuto.View
         private void comboBoxCarFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedOrderOption = this.comboBoxCarFilter.SelectedItem.ToString();
-            vm.OrderBy.Execute(selectedOrderOption); 
+            vm.OrderBy.Execute(selectedOrderOption);
+            this.dataGridViewCarTable.DataSource = this.vm.Car;
+        }
+
+        private void comboBoxFilterBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedFilterOption = this.comboBoxFilterBy.SelectedItem.ToString();
+            vm.FilterBy.Execute(selectedFilterOption);
             this.dataGridViewCarTable.DataSource = this.vm.Car;
         }
     }

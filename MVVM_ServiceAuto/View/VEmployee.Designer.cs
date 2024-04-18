@@ -251,6 +251,7 @@
             comboBoxFilterBy.Name = "comboBoxFilterBy";
             comboBoxFilterBy.Size = new Size(151, 24);
             comboBoxFilterBy.TabIndex = 18;
+            comboBoxFilterBy.SelectedIndexChanged += comboBoxFilterBy_SelectedIndexChanged;
             // 
             // textBoxSearchBar
             // 
