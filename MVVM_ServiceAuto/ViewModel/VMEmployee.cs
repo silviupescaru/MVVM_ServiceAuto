@@ -48,7 +48,7 @@ namespace MVVM_ServiceAuto.ViewModel
             this.Logout = new LogoutEmployeeCommand(new VLogin(), vEmployee);
             //this.SaveCSV = new SaveCSVCommand();
             //this.SaveXML = new SaveXMLCommand();
-            //this.SaveJSON = new SaveJSONCommand();
+            this.SaveJSON = new SaveJSONCommand(this);
             //this.SaveDOC = new SaveDOCCommand();
         }
 

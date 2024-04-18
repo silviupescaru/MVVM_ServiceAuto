@@ -40,6 +40,12 @@ namespace MVVM_ServiceAuto.View
             this.buttonSearch.Click += delegate { string searchedOwner = textBoxSearchBar.Text; Debug.WriteLine(searchedOwner); vm.SearchBy.Execute(searchedOwner); this.dataGridViewCarTable.DataSource = this.vm.Car; };
             this.buttonViewAll.Click += delegate { vm.ListAll.Execute(); this.dataGridViewCarTable.DataSource = this.vm.Car; };
             this.buttonLogout.Click += delegate { vm.Logout.Execute(); };
+            this.buttonSaveJSON.Click += delegate { vm.SaveJSON.Execute(); };
+        }
+
+        private void ButtonSaveJSON_Click(object? sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void DataGridViewCarTable_SelectionChanged(object sender, EventArgs e)

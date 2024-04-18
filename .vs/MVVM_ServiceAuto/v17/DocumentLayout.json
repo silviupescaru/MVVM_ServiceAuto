@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "D:\\Facultate\\MVVM_ServiceAuto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|d:\\facultate\\mvvm_serviceauto\\mvvm_serviceauto\\viewmodel\\commandsemployee\\logoutemployeecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|solutionrelative:mvvm_serviceauto\\viewmodel\\commandsemployee\\logoutemployeecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|d:\\facultate\\mvvm_serviceauto\\mvvm_serviceauto\\viewmodel\\commandsemployee\\savejsoncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|solutionrelative:mvvm_serviceauto\\viewmodel\\commandsemployee\\savejsoncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|d:\\facultate\\mvvm_serviceauto\\mvvm_serviceauto\\view\\vemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|D:\\Facultate\\MVVM_ServiceAuto\\mvvm_serviceauto\\view\\vemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|solutionrelative:mvvm_serviceauto\\view\\vemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,20 +15,8 @@
       "RelativeMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|solutionrelative:mvvm_serviceauto\\viewmodel\\vmemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|D:\\Facultate\\MVVM_ServiceAuto\\mvvm_serviceauto\\viewmodel\\commandsemployee\\searchbyownercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|solutionrelative:mvvm_serviceauto\\viewmodel\\commandsemployee\\searchbyownercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|d:\\facultate\\mvvm_serviceauto\\mvvm_serviceauto\\viewmodel\\commandslogin\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|solutionrelative:mvvm_serviceauto\\viewmodel\\commandslogin\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|D:\\Facultate\\MVVM_ServiceAuto\\mvvm_serviceauto\\viewmodel\\commandsemployee\\listallcarcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|solutionrelative:mvvm_serviceauto\\viewmodel\\commandsemployee\\listallcarcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|D:\\Facultate\\MVVM_ServiceAuto\\mvvm_serviceauto\\viewmodel\\commandsemployee\\filterbycarcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|solutionrelative:mvvm_serviceauto\\viewmodel\\commandsemployee\\filterbycarcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,53 +31,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LogoutEmployeeCommand.cs",
-              "DocumentMoniker": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\LogoutEmployeeCommand.cs",
-              "RelativeDocumentMoniker": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\LogoutEmployeeCommand.cs",
-              "ToolTip": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\LogoutEmployeeCommand.cs",
-              "RelativeToolTip": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\LogoutEmployeeCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAANAAAA",
+              "Title": "SaveJSONCommand.cs",
+              "DocumentMoniker": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SaveJSONCommand.cs",
+              "RelativeDocumentMoniker": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SaveJSONCommand.cs",
+              "ToolTip": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SaveJSONCommand.cs",
+              "RelativeToolTip": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SaveJSONCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T13:32:12.594Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginCommand.cs",
-              "DocumentMoniker": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsLogin\\LoginCommand.cs",
-              "RelativeDocumentMoniker": "MVVM_ServiceAuto\\ViewModel\\CommandsLogin\\LoginCommand.cs",
-              "ToolTip": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsLogin\\LoginCommand.cs",
-              "RelativeToolTip": "MVVM_ServiceAuto\\ViewModel\\CommandsLogin\\LoginCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T13:31:30.973Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ListAllCarCommand.cs",
-              "DocumentMoniker": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\ListAllCarCommand.cs",
-              "RelativeDocumentMoniker": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\ListAllCarCommand.cs",
-              "ToolTip": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\ListAllCarCommand.cs",
-              "RelativeToolTip": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\ListAllCarCommand.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T05:39:27.295Z",
+              "WhenOpened": "2024-04-18T14:09:22.428Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "SearchByOwnerCommand.cs",
-              "DocumentMoniker": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SearchByOwnerCommand.cs",
-              "RelativeDocumentMoniker": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SearchByOwnerCommand.cs",
-              "ToolTip": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SearchByOwnerCommand.cs",
-              "RelativeToolTip": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SearchByOwnerCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAxAAAA",
+              "Title": "ListAllCarCommand.cs",
+              "DocumentMoniker": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\ListAllCarCommand.cs",
+              "RelativeDocumentMoniker": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\ListAllCarCommand.cs",
+              "ToolTip": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\ListAllCarCommand.cs",
+              "RelativeToolTip": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\ListAllCarCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T05:16:33.04Z",
+              "WhenOpened": "2024-04-18T05:39:27.295Z",
               "EditorCaption": ""
             },
             {
@@ -100,22 +62,10 @@
               "RelativeDocumentMoniker": "MVVM_ServiceAuto\\ViewModel\\VMEmployee.cs",
               "ToolTip": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\VMEmployee.cs",
               "RelativeToolTip": "MVVM_ServiceAuto\\ViewModel\\VMEmployee.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAC8AAABLAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAADIAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T05:16:18.507Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FilterByCarCommand.cs",
-              "DocumentMoniker": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\FilterByCarCommand.cs",
-              "RelativeDocumentMoniker": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\FilterByCarCommand.cs",
-              "ToolTip": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\FilterByCarCommand.cs",
-              "RelativeToolTip": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\FilterByCarCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T04:49:45.348Z"
             },
             {
               "$type": "Document",

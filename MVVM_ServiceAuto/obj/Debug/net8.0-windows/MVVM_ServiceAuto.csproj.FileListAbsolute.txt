@@ -58,3 +58,6 @@ D:\Facultate\MVVM_ServiceAuto\MVVM_ServiceAuto\obj\Debug\net8.0-windows\MVVM_Ser
 D:\Facultate\MVVM_ServiceAuto\MVVM_ServiceAuto\obj\Debug\net8.0-windows\ref\MVVM_ServiceAuto.dll
 E:\Facultate\III\PS\MVVM_ServiceAuto\MVVM_ServiceAuto\obj\Debug\net8.0-windows\MVVM_ServiceAuto.ViewModel.CommandsEmployee.AddCarCommand.resources
 D:\Facultate\MVVM_ServiceAuto\MVVM_ServiceAuto\obj\Debug\net8.0-windows\MVVM_ServiceAuto.ViewModel.CommandsEmployee.AddCarCommand.resources
+D:\Facultate\MVVM_ServiceAuto\MVVM_ServiceAuto\bin\Debug\net8.0-windows\Xceed.Document.NET5.dll
+D:\Facultate\MVVM_ServiceAuto\MVVM_ServiceAuto\bin\Debug\net8.0-windows\Xceed.Words.NET5.dll
+D:\Facultate\MVVM_ServiceAuto\MVVM_ServiceAuto\bin\Debug\net8.0-windows\Newtonsoft.Json.dll

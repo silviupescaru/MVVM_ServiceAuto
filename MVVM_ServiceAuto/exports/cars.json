@@ -1,0 +1,51 @@
+[
+  {
+    "carID": 2,
+    "owner": "Marius",
+    "brand": "Mercedes-Benz",
+    "color": "Gray",
+    "fuel": "Gasoline"
+  },
+  {
+    "carID": 3,
+    "owner": "J Cole",
+    "brand": "Lexus",
+    "color": "White",
+    "fuel": "Hybrid"
+  },
+  {
+    "carID": 4,
+    "owner": "Bogdan",
+    "brand": "Audi",
+    "color": "Gray",
+    "fuel": "Diesel"
+  },
+  {
+    "carID": 6,
+    "owner": "Barto",
+    "brand": "Skoda",
+    "color": "Navy Blue",
+    "fuel": "Gasoline"
+  },
+  {
+    "carID": 2002,
+    "owner": "Cata",
+    "brand": "Renault",
+    "color": "Glacier White",
+    "fuel": "Diesel"
+  },
+  {
+    "carID": 3002,
+    "owner": "Geani",
+    "brand": "Mercedes-Benz",
+    "color": "White",
+    "fuel": "Diesel"
+  },
+  {
+    "carID": 3003,
+    "owner": "Bobita",
+    "brand": "Mercedes-Benz",
+    "color": "Black",
+    "fuel": "Diesel"
+  }
+]
