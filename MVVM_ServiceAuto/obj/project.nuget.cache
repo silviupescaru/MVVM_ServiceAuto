@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bNSODIhWfQvN08g8OWMM0UUfeAJRK8C6qZ81mzgW7qgqTzEEqBnuADW5GWVMSDXxGlnQs8utqfgI4WXB9aqV3Q==",
+  "dgSpecHash": "xK01BAZ+TPpv8A325DWQ0tDN5YvNW86exp+cBlkDSJx/0DSmKhzg6PkAb5+FRmOjIjtd2P95cR556fn/256F4w==",
   "success": true,
-  "projectFilePath": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj",
+  "projectFilePath": "E:\\Facultate\\III\\PS\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mike\\.nuget\\packages\\docx\\3.0.0\\docx.3.0.0.nupkg.sha512",
     "C:\\Users\\mike\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",

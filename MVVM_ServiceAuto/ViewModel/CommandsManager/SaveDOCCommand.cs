@@ -26,7 +26,7 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsManager
             {
                 if (vmManager != null)
                 {
-                    using (DocX document = DocX.Create("D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\exports\\cars.docx"))
+                    using (DocX document = DocX.Create("E:\\Facultate\\III\\PS\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\exports\\cars.docx"))
                     {
                         Table t = document.AddTable(vmManager.Car.Rows.Count, vmManager.Car.Columns.Count);
 

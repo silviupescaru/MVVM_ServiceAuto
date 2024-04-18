@@ -32,7 +32,7 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsManager
                         Formatting = Formatting.Indented
                     };
 
-                    using (StreamWriter sw = new StreamWriter("D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\exports\\cars.json"))
+                    using (StreamWriter sw = new StreamWriter("E:\\Facultate\\III\\PS\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\exports\\cars.json"))
                     using (JsonTextWriter writer = new JsonTextWriter(sw))
                     {
                         serializer.Serialize(writer, vmManager.Car);

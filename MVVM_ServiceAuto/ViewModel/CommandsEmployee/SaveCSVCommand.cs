@@ -36,7 +36,7 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsEmployee
                         sb.AppendLine(string.Join(",", fields));
                     }
 
-                    File.WriteAllText("D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\exports\\cars.csv", sb.ToString());
+                    File.WriteAllText("E:\\Facultate\\III\\PS\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\exports\\cars.csv", sb.ToString());
                     MessageBox.Show("File saved successfully!");
                 }
             }

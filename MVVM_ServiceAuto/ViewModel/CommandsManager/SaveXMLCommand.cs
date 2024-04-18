@@ -25,7 +25,7 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsManager
                 if (vmManager != null)
                 {
                     vmManager.Car.TableName = "Cars";
-                    vmManager.Car.WriteXml("D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\exports\\cars.xml");
+                    vmManager.Car.WriteXml("E:\\Facultate\\III\\PS\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\exports\\cars.xml");
                     MessageBox.Show("File saved successfully!");
                 }
             }
