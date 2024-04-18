@@ -33,7 +33,7 @@ namespace MVVM_ServiceAuto.View
             this.buttonDelete.Click += delegate { vm.DeleteUser.Execute(); this.dataGridViewUsers.DataSource = this.vm.Users; };
             this.buttonViewAll.Click += delegate { vm.ListUsers.Execute(); this.dataGridViewUsers.DataSource = this.vm.Users; };
             this.buttonSearch.Click += delegate { string searchedRole = textBoxSearch.Text;  vm.SearchByRole.Execute(searchedRole); this.dataGridViewUsers.DataSource = this.vm.Users; };
-
+            this.buttonLogout.Click += delegate { vm.Logout.Execute(); };
         }
 
         private void DataGridViewUsers_SelectionChanged(object sender, EventArgs e)

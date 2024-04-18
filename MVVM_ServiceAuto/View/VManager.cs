@@ -2,19 +2,80 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MVVM_ServiceAuto.ViewModel;
 
 namespace MVVM_ServiceAuto.View
 {
     public partial class VManager : Form
     {
+        private VMManager vm;
+
         public VManager()
         {
             InitializeComponent();
+            this.vm = new VMManager(this);
+
+            this.numericUpDownCarID.DataBindings.Add("Text", this.vm, "CarID", false, DataSourceUpdateMode.OnPropertyChanged);
+            this.textBoxOwner.DataBindings.Add("Text", this.vm, "Owner", false, DataSourceUpdateMode.OnPropertyChanged);
+            this.textBoxBrand.DataBindings.Add("Text", this.vm, "Brand", false, DataSourceUpdateMode.OnPropertyChanged);
+            this.textBoxColor.DataBindings.Add("Text", this.vm, "Color", false, DataSourceUpdateMode.OnPropertyChanged);
+
+            this.comboBoxFuel.DataBindings.Add("Text", this.vm, "Fuel", false, DataSourceUpdateMode.OnPropertyChanged);
+            this.dataGridViewCarTable.DataSource = this.vm.Car;
+
+            this.dataGridViewCarTable.SelectionChanged += DataGridViewCarTable_SelectionChanged;
+
+            this.buttonSearch.Click += delegate { string searchedOwner = textBoxSearchBar.Text; vm.SearchBy.Execute(searchedOwner); this.dataGridViewCarTable.DataSource = this.vm.Car; };
+            this.buttonViewAll.Click += delegate { vm.ListAll.Execute(); this.dataGridViewCarTable.DataSource = this.vm.Car; };
+            this.buttonLogout.Click += delegate { vm.Logout.Execute(); };
+
+            this.buttonSaveJSON.Click += delegate { vm.SaveJSON.Execute(); };
+            this.buttonSaveXML.Click += delegate { vm.SaveXML.Execute(); };
+            this.buttonSaveCSV.Click += delegate { vm.SaveCSV.Execute(); };
+            this.buttonSaveDOC.Click += delegate { vm.SaveDOC.Execute(); };
+        }
+
+        private void ButtonSaveJSON_Click(object? sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void DataGridViewCarTable_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridViewCarTable.SelectedRows.Count > 0) // make sure user select at least 1 row 
+            {
+                string owner = dataGridViewCarTable.SelectedRows[0].Cells["Owner"].Value + string.Empty;
+                string brand = dataGridViewCarTable.SelectedRows[0].Cells["Brand"].Value + string.Empty;
+                string color = dataGridViewCarTable.SelectedRows[0].Cells["Color"].Value + string.Empty;
+                string fuel = dataGridViewCarTable.SelectedRows[0].Cells["Fuel"].Value + string.Empty;
+                int carID = int.Parse(dataGridViewCarTable.SelectedRows[0].Cells["CarID"].Value + string.Empty);
+
+                textBoxOwner.Text = owner;
+                textBoxBrand.Text = brand;
+                textBoxColor.Text = color;
+                comboBoxFuel.SelectedItem = fuel;
+                numericUpDownCarID.Value = carID;
+            }
+        }
+
+        private void comboBoxCarFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedOrderOption = this.comboBoxCarFilter.SelectedItem.ToString();
+            vm.OrderBy.Execute(selectedOrderOption);
+            this.dataGridViewCarTable.DataSource = this.vm.Car;
+        }
+
+        private void comboBoxFilterBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedFilterOption = this.comboBoxFilterBy.SelectedItem.ToString();
+            vm.FilterBy.Execute(selectedFilterOption);
+            this.dataGridViewCarTable.DataSource = this.vm.Car;
         }
     }
 }

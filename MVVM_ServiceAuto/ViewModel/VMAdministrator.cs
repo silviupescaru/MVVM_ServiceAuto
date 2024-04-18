@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using MVVM_ServiceAuto.View;
 using System.ComponentModel;
 using MVVM_ServiceAuto.Model.Repository;
+using MVVM_ServiceAuto.ViewModel.CommandsLogin;
 
 namespace MVVM_ServiceAuto.ViewModel
 {
@@ -45,7 +46,7 @@ namespace MVVM_ServiceAuto.ViewModel
             this.DeleteUser = new DeleteUserCommand(this);
             this.ListUsers = new ListAllUsersCommand(this);
             this.SearchByRole = new FilterByRoleCommand(this);
-            //this.Logout = new LogoutAdministratorCommand(this);
+            this.Logout = new LogoutAdministratorCommand(new VLogin(), vAdministrator);
         }
 
         public uint UserID
