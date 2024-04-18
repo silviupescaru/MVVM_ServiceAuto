@@ -41,6 +41,7 @@ namespace MVVM_ServiceAuto.View
             this.buttonViewAll.Click += delegate { vm.ListAll.Execute(); this.dataGridViewCarTable.DataSource = this.vm.Car; };
             this.buttonLogout.Click += delegate { vm.Logout.Execute(); };
             this.buttonSaveJSON.Click += delegate { vm.SaveJSON.Execute(); };
+            this.buttonSaveXML.Click += delegate { vm.SaveXML.Execute(); };
         }
 
         private void ButtonSaveJSON_Click(object? sender, EventArgs e)

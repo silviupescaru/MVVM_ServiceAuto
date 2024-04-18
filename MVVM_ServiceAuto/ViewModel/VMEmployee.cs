@@ -47,7 +47,7 @@ namespace MVVM_ServiceAuto.ViewModel
             this.SearchBy = new SearchByOwnerCommand(this);
             this.Logout = new LogoutEmployeeCommand(new VLogin(), vEmployee);
             //this.SaveCSV = new SaveCSVCommand();
-            //this.SaveXML = new SaveXMLCommand();
+            this.SaveXML = new SaveXMLCommand(this);
             this.SaveJSON = new SaveJSONCommand(this);
             //this.SaveDOC = new SaveDOCCommand();
         }

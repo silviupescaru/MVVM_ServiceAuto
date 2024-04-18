@@ -1,0 +1,52 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Cars>
+    <carID>2</carID>
+    <owner>Marius</owner>
+    <brand>Mercedes-Benz</brand>
+    <color>Gray</color>
+    <fuel>Gasoline</fuel>
+  </Cars>
+  <Cars>
+    <carID>3</carID>
+    <owner>J Cole</owner>
+    <brand>Lexus</brand>
+    <color>White</color>
+    <fuel>Hybrid</fuel>
+  </Cars>
+  <Cars>
+    <carID>4</carID>
+    <owner>Bogdan</owner>
+    <brand>Audi</brand>
+    <color>Gray</color>
+    <fuel>Diesel</fuel>
+  </Cars>
+  <Cars>
+    <carID>6</carID>
+    <owner>Barto</owner>
+    <brand>Skoda</brand>
+    <color>Navy Blue</color>
+    <fuel>Gasoline</fuel>
+  </Cars>
+  <Cars>
+    <carID>2002</carID>
+    <owner>Cata</owner>
+    <brand>Renault</brand>
+    <color>Glacier White</color>
+    <fuel>Diesel</fuel>
+  </Cars>
+  <Cars>
+    <carID>3002</carID>
+    <owner>Geani</owner>
+    <brand>Mercedes-Benz</brand>
+    <color>White</color>
+    <fuel>Diesel</fuel>
+  </Cars>
+  <Cars>
+    <carID>3003</carID>
+    <owner>Bobita</owner>
+    <brand>Mercedes-Benz</brand>
+    <color>Black</color>
+    <fuel>Diesel</fuel>
+  </Cars>
+</DocumentElement>

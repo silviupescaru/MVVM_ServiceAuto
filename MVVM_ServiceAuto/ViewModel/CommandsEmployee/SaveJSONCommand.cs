@@ -11,7 +11,6 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsEmployee
     public class SaveJSONCommand : ICommands
     {
         private VMEmployee vmEmployee;
-        private Repository repository = new Repository();
 
         public SaveJSONCommand(VMEmployee vmEmployee)
         {
