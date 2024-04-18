@@ -25,10 +25,8 @@ namespace MVVM_ServiceAuto.View
             this.textBoxOwner.DataBindings.Add("Text", this.vm, "Owner", false, DataSourceUpdateMode.OnPropertyChanged);
             this.textBoxBrand.DataBindings.Add("Text", this.vm, "Brand", false, DataSourceUpdateMode.OnPropertyChanged);
             this.textBoxColor.DataBindings.Add("Text", this.vm, "Color", false, DataSourceUpdateMode.OnPropertyChanged);
-            //this.textBoxSearchBar.DataBindings.Add("Text", this.vm, "SearchBar", false, DataSourceUpdateMode.OnValidation);
 
             this.comboBoxFuel.DataBindings.Add("Text", this.vm, "Fuel", false, DataSourceUpdateMode.OnPropertyChanged);
-            //this.comboBoxCarFilter.DataBindings.Add("Text", this.vm, "OrderBy", false, DataSourceUpdateMode.OnValidation);
             this.dataGridViewCarTable.DataSource = this.vm.Car;
 
             this.buttonAdd.Click += delegate { vm.AddCar.Execute(); this.dataGridViewCarTable.DataSource = this.vm.Car; };
@@ -40,6 +38,7 @@ namespace MVVM_ServiceAuto.View
             this.buttonSearch.Click += delegate { string searchedOwner = textBoxSearchBar.Text; Debug.WriteLine(searchedOwner); vm.SearchBy.Execute(searchedOwner); this.dataGridViewCarTable.DataSource = this.vm.Car; };
             this.buttonViewAll.Click += delegate { vm.ListAll.Execute(); this.dataGridViewCarTable.DataSource = this.vm.Car; };
             this.buttonLogout.Click += delegate { vm.Logout.Execute(); };
+
             this.buttonSaveJSON.Click += delegate { vm.SaveJSON.Execute(); };
             this.buttonSaveXML.Click += delegate { vm.SaveXML.Execute(); };
             this.buttonSaveCSV.Click += delegate { vm.SaveCSV.Execute(); };

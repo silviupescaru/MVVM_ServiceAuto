@@ -45,15 +45,11 @@
             textBox1 = new TextBox();
             buttonViewAll = new Button();
             buttonSearch = new Button();
-            dataGridView1 = new DataGridView();
-            userID = new DataGridViewTextBoxColumn();
-            username = new DataGridViewTextBoxColumn();
-            password = new DataGridViewTextBoxColumn();
-            role = new DataGridViewTextBoxColumn();
+            dataGridViewUsers = new DataGridView();
             buttonLogout = new Button();
             labelLoggedUser = new Label();
             ((System.ComponentModel.ISupportInitialize)numericUpDownUserID).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).BeginInit();
             SuspendLayout();
             // 
             // labelUserID
@@ -138,6 +134,7 @@
             // 
             numericUpDownUserID.Font = new Font("Montserrat", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             numericUpDownUserID.Location = new Point(181, 123);
+            numericUpDownUserID.Maximum = new decimal(new int[] { 4000000, 0, 0, 0 });
             numericUpDownUserID.Name = "numericUpDownUserID";
             numericUpDownUserID.Size = new Size(132, 22);
             numericUpDownUserID.TabIndex = 7;
@@ -206,9 +203,9 @@
             buttonSearch.Text = "SEARCH";
             buttonSearch.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridViewUsers
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
             dataGridViewCellStyle1.Font = new Font("Montserrat SemiBold", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -216,9 +213,8 @@
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { userID, username, password, role });
+            dataGridViewUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Montserrat", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -226,36 +222,16 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Location = new Point(59, 296);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(754, 319);
-            dataGridView1.TabIndex = 15;
-            // 
-            // userID
-            // 
-            userID.HeaderText = "User ID";
-            userID.Name = "userID";
-            // 
-            // username
-            // 
-            username.HeaderText = "Username";
-            username.Name = "username";
-            // 
-            // password
-            // 
-            password.HeaderText = "Password";
-            password.Name = "password";
-            // 
-            // role
-            // 
-            role.HeaderText = "Role";
-            role.Name = "role";
+            dataGridViewUsers.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewUsers.Location = new Point(59, 296);
+            dataGridViewUsers.Name = "dataGridViewUsers";
+            dataGridViewUsers.Size = new Size(754, 319);
+            dataGridViewUsers.TabIndex = 15;
             // 
             // buttonLogout
             // 
             buttonLogout.Font = new Font("Montserrat", 8F);
-            buttonLogout.Location = new Point(59, 680);
+            buttonLogout.Location = new Point(124, 680);
             buttonLogout.Name = "buttonLogout";
             buttonLogout.Size = new Size(75, 23);
             buttonLogout.TabIndex = 16;
@@ -270,11 +246,11 @@
             labelLoggedUser.ForeColor = Color.White;
             labelLoggedUser.Location = new Point(57, 654);
             labelLoggedUser.Name = "labelLoggedUser";
-            labelLoggedUser.Size = new Size(103, 20);
+            labelLoggedUser.Size = new Size(209, 20);
             labelLoggedUser.TabIndex = 17;
-            labelLoggedUser.Text = "Logged in as";
+            labelLoggedUser.Text = "Logged in as Administrator";
             // 
-            // AdministratorGUI
+            // VAdministrator
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -283,7 +259,7 @@
             ClientSize = new Size(869, 733);
             Controls.Add(labelLoggedUser);
             Controls.Add(buttonLogout);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewUsers);
             Controls.Add(buttonSearch);
             Controls.Add(buttonViewAll);
             Controls.Add(textBox1);
@@ -299,10 +275,10 @@
             Controls.Add(labelPassword);
             Controls.Add(labelRole);
             Controls.Add(labelUserID);
-            Name = "AdministratorGUI";
+            Name = "VAdministrator";
             Text = "AdministratorGUI";
             ((System.ComponentModel.ISupportInitialize)numericUpDownUserID).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -324,11 +300,7 @@
         private TextBox textBox1;
         private Button buttonViewAll;
         private Button buttonSearch;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn userID;
-        private DataGridViewTextBoxColumn username;
-        private DataGridViewTextBoxColumn password;
-        private DataGridViewTextBoxColumn role;
+        private DataGridView dataGridViewUsers;
         private Button buttonLogout;
         private Label labelLoggedUser;
     }
