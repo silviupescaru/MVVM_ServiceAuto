@@ -4,9 +4,6 @@
     <Compile Update="ViewModel\CommandsAdministrator\UpdateUserCommand.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ViewModel\CommandsLogin\LoginCommand.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="View\VAdministrator.cs">
       <SubType>Form</SubType>
     </Compile>

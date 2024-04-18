@@ -13,7 +13,7 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsLogin
 {
 
 
-    public class LoginCommand : Form, ICommands
+    public class LoginCommand : ICommands
     {
 
         private VMLogin vmLogin;

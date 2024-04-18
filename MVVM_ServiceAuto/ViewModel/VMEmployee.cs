@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using MVVM_ServiceAuto.ViewModel.CommandsLogin;
 
 namespace MVVM_ServiceAuto.ViewModel
 {
@@ -44,7 +45,7 @@ namespace MVVM_ServiceAuto.ViewModel
             this.OrderBy = new OrderByCarCommand(this);
             this.ListAll = new ListAllCarCommand(this);
             this.SearchBy = new SearchByOwnerCommand(this);
-            //this.Logout = new LogoutEmployeeCommand();
+            this.Logout = new LogoutEmployeeCommand(new VLogin(), vEmployee);
             //this.SaveCSV = new SaveCSVCommand();
             //this.SaveXML = new SaveXMLCommand();
             //this.SaveJSON = new SaveJSONCommand();
