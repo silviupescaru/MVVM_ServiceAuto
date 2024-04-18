@@ -8,52 +8,49 @@ using MVVM_ServiceAuto.Model;
 using MVVM_ServiceAuto.Model.Repository;
 using MVVM_ServiceAuto.View;
 
-namespace MVVM_ServiceAuto.ViewModel.CommandsEmployee
+namespace MVVM_ServiceAuto.ViewModel.CommandsAdministrator
 {
-    public class UpdateUserCommand : Form, ICommands
+    public class UpdateUserCommand : ICommands
     {
 
-        private VMEmployee vmEmployee;
-        private VEmployee _vEmployee;
-        CarRepository carRepository = new CarRepository();
+        private VMAdministrator vmAdministrator;
+        UserRepository userRepository = new UserRepository();
         Repository repository = new Repository();
 
-        public UpdateUserCommand(VMEmployee vmEmployee, VEmployee vEmployee)
+        public UpdateUserCommand(VMAdministrator vmAdministrator)
         {
-            this.vmEmployee = vmEmployee;
-            _vEmployee = vEmployee;
+            this.vmAdministrator = vmAdministrator;
         }
 
         public void Execute() { }
         public void Execute(string dontCare) { }
 
-        public void Execute(int selectedCar)
+        public void Execute(int selectedUser)
         {
 
             try
             {
-                if (Convert.ToBoolean(selectedCar))
+                if (Convert.ToBoolean(selectedUser))
                 {
                     //uint selectedID = Convert.ToUInt32(this.iEmployeeGUI.GetSelectedCarID());
-                    Car car = this.validInformation();
-                    if (car != null)
+                    User user = this.validInformation();
+                    if (user != null)
                     {
-                        bool result = this.carRepository.UpdateCar(car);
+                        bool result = this.userRepository.UpdateUser(user);
                         if (result)
                         {
                             MessageBox.Show("Updating was completed successfully!");
-                            vmEmployee.CarID = 1;
-                            vmEmployee.Owner = string.Empty;
-                            vmEmployee.Brand = string.Empty;
-                            vmEmployee.Color = string.Empty;
-                            vmEmployee.Fuel = string.Empty;
-                            vmEmployee.Car.Rows.Clear();
-                            vmEmployee.Car = repository.GetTable("SELECT * FROM [Car]");
+                            vmAdministrator.UserID = 1;
+                            vmAdministrator.Username = string.Empty;
+                            vmAdministrator.Password = string.Empty;
+                            vmAdministrator.Role = string.Empty;
+                            vmAdministrator.Users.Rows.Clear();
+                            vmAdministrator.Users = repository.GetTable("SELECT * FROM [User]");
                         }
                         else MessageBox.Show("Updating was ended with failure!");
                     }
                 }
-                else MessageBox.Show("No car has been selected to be updated!");
+                else MessageBox.Show("No user has been selected to be updated!");
             }
             catch (Exception exception)
             {
@@ -62,44 +59,33 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsEmployee
 
         }
 
-        private Car validInformation()
+        private User validInformation()
         {
-            uint id = vmEmployee.CarID;
-            Debug.Print("Car ID: " + id);
-            if (id == 0)
+            Debug.Print("User ID: " + vmAdministrator.UserID);
+            if (vmAdministrator.UserID == 0)
             {
-                MessageBox.Show("Car ID must be non-zero natural number!");
+                MessageBox.Show("User ID must be non-zero natural number!");
                 return null;
             }
-            string owner = vmEmployee.Owner;
-            Debug.Print("Car Owner: " + owner);
-            if (owner == null || owner.Length == 0)
+            Debug.Print("Username: " + vmAdministrator.Username);
+            if (vmAdministrator.Username == null || vmAdministrator.Username.Length == 0)
             {
-                MessageBox.Show("Car Owner is empty!");
+                MessageBox.Show("Username is empty!");
                 return null;
             }
-            string brand = vmEmployee.Brand;
-            Debug.Print("Car Brand: " + brand);
-            if (brand == null || brand.Length == 0)
+            Debug.Print("Password: " + vmAdministrator.Password);
+            if (vmAdministrator.Password == null || vmAdministrator.Password.Length == 0)
             {
-                MessageBox.Show("Car Brand is empty!");
+                MessageBox.Show("Password is empty!");
                 return null;
             }
-            string color = vmEmployee.Color;
-            Debug.Print("Car Color: " + color);
-            if (color == null || color.Length == 0)
+            Debug.Print("Role: " + vmAdministrator.Role);
+            if (vmAdministrator.Role == null || vmAdministrator.Role.Length == 0)
             {
-                MessageBox.Show("Car Color is empty");
+                MessageBox.Show("Role is empty");
                 return null;
             }
-            string fuel = vmEmployee.Fuel;
-            Debug.Print("Car Fuel: " + fuel);
-            if (fuel == null || fuel.Length == 0)
-            {
-                MessageBox.Show("Car Fuel is empty");
-                return null;
-            }
-            return new Car(id, owner, brand, color, fuel);
+            return new User(vmAdministrator.UserID, vmAdministrator.Username, vmAdministrator.Password, vmAdministrator.Role);
         }
     }
 }

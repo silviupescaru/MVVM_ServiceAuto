@@ -29,7 +29,7 @@ namespace MVVM_ServiceAuto.View
             this.dataGridViewUsers.SelectionChanged += DataGridViewUsers_SelectionChanged;
 
             this.buttonAdd.Click += delegate { vm.AddUser.Execute(); this.dataGridViewUsers.DataSource = this.vm.Users; };
-            
+            this.buttonUpdate.Click += delegate { int selectedUser = dataGridViewUsers.SelectedRows.Count; vm.UpdateUser.Execute(selectedUser); this.dataGridViewUsers.DataSource = this.vm.Users; };
 
         
         

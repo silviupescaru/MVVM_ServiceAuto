@@ -40,7 +40,7 @@ namespace MVVM_ServiceAuto.ViewModel
             this.Users = repository.GetTable("SELECT * FROM [User]");
             this.vAdministrator = vAdministrator;
             this.AddUser = new AddUserCommand(this);
-            //this.UpdateUser = new UpdateUserCommand(this);
+            this.UpdateUser = new UpdateUserCommand(this);
             //this.DeleteUser = new DeleteUserCommand(this);
             //this.ListUsers = new ListAllUsersCommand(this);
             //this.SearchByRole = new FilterByRoleCommand(this);
