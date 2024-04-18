@@ -42,7 +42,7 @@ namespace MVVM_ServiceAuto.ViewModel
             this.DeleteCar = new DeleteCarCommand(this);
             this.FilterBy = new FilterByCarCommand(this);
             this.OrderBy = new OrderByCarCommand(this);
-            //this.ListAll = new ListAllCarCommand();
+            this.ListAll = new ListAllCarCommand(this);
             this.SearchBy = new SearchByOwnerCommand(this);
             //this.Logout = new LogoutEmployeeCommand();
             //this.SaveCSV = new SaveCSVCommand();
