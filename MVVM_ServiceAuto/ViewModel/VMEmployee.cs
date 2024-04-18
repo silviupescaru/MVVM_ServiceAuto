@@ -46,10 +46,10 @@ namespace MVVM_ServiceAuto.ViewModel
             this.ListAll = new ListAllCarCommand(this);
             this.SearchBy = new SearchByOwnerCommand(this);
             this.Logout = new LogoutEmployeeCommand(new VLogin(), vEmployee);
-            //this.SaveCSV = new SaveCSVCommand();
+            this.SaveCSV = new SaveCSVCommand(this);
             this.SaveXML = new SaveXMLCommand(this);
             this.SaveJSON = new SaveJSONCommand(this);
-            //this.SaveDOC = new SaveDOCCommand();
+            this.SaveDOC = new SaveDOCCommand(this);
         }
 
         public uint CarID 

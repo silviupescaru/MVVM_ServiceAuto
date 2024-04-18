@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\Facultate\\MVVM_ServiceAuto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|d:\\facultate\\mvvm_serviceauto\\mvvm_serviceauto\\viewmodel\\commandsemployee\\savexmlcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|solutionrelative:mvvm_serviceauto\\viewmodel\\commandsemployee\\savexmlcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|D:\\Facultate\\MVVM_ServiceAuto\\mvvm_serviceauto\\view\\vemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|solutionrelative:mvvm_serviceauto\\view\\vemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,7 +11,19 @@
       "RelativeMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|solutionrelative:mvvm_serviceauto\\viewmodel\\vmemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|d:\\facultate\\mvvm_serviceauto\\mvvm_serviceauto\\viewmodel\\commandsemployee\\savejsoncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|d:\\facultate\\mvvm_serviceauto\\mvvm_serviceauto\\viewmodel\\commandsemployee\\savedoccommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|solutionrelative:mvvm_serviceauto\\viewmodel\\commandsemployee\\savedoccommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|d:\\facultate\\mvvm_serviceauto\\mvvm_serviceauto\\viewmodel\\commandsemployee\\savexmlcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|solutionrelative:mvvm_serviceauto\\viewmodel\\commandsemployee\\savexmlcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|d:\\facultate\\mvvm_serviceauto\\mvvm_serviceauto\\viewmodel\\commandsemployee\\savecsvcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|solutionrelative:mvvm_serviceauto\\viewmodel\\commandsemployee\\savecsvcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|D:\\Facultate\\MVVM_ServiceAuto\\mvvm_serviceauto\\viewmodel\\commandsemployee\\savejsoncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6770780D-C9A9-4F7D-84B1-339947C447BD}|MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj|solutionrelative:mvvm_serviceauto\\viewmodel\\commandsemployee\\savejsoncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -30,24 +38,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "SaveCSVCommand.cs",
+              "DocumentMoniker": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SaveCSVCommand.cs",
+              "RelativeDocumentMoniker": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SaveCSVCommand.cs",
+              "ToolTip": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SaveCSVCommand.cs",
+              "RelativeToolTip": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SaveCSVCommand.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACcAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T15:58:48.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SaveXMLCommand.cs",
               "DocumentMoniker": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SaveXMLCommand.cs",
               "RelativeDocumentMoniker": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SaveXMLCommand.cs",
               "ToolTip": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SaveXMLCommand.cs",
               "RelativeToolTip": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SaveXMLCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAA2AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T14:31:42.276Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "SaveJSONCommand.cs",
               "DocumentMoniker": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SaveJSONCommand.cs",
               "RelativeDocumentMoniker": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SaveJSONCommand.cs",
@@ -55,12 +76,11 @@
               "RelativeToolTip": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SaveJSONCommand.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T14:09:22.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-18T14:09:22.428Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ListAllCarCommand.cs",
               "DocumentMoniker": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\ListAllCarCommand.cs",
               "RelativeDocumentMoniker": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\ListAllCarCommand.cs",
@@ -72,28 +92,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "VMEmployee.cs",
               "DocumentMoniker": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\VMEmployee.cs",
               "RelativeDocumentMoniker": "MVVM_ServiceAuto\\ViewModel\\VMEmployee.cs",
               "ToolTip": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\VMEmployee.cs",
               "RelativeToolTip": "MVVM_ServiceAuto\\ViewModel\\VMEmployee.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAADEAAAAyAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAADMAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T05:16:18.507Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "VEmployee.cs",
               "DocumentMoniker": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\View\\VEmployee.cs",
               "RelativeDocumentMoniker": "MVVM_ServiceAuto\\View\\VEmployee.cs",
               "ToolTip": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\View\\VEmployee.cs",
               "RelativeToolTip": "MVVM_ServiceAuto\\View\\VEmployee.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAMwCsAAABLAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAMwB4AAAB8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-14T12:22:16.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SaveDOCCommand.cs",
+              "DocumentMoniker": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SaveDOCCommand.cs",
+              "RelativeDocumentMoniker": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SaveDOCCommand.cs",
+              "ToolTip": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SaveDOCCommand.cs",
+              "RelativeToolTip": "MVVM_ServiceAuto\\ViewModel\\CommandsEmployee\\SaveDOCCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T16:02:57.26Z",
               "EditorCaption": ""
             }
           ]

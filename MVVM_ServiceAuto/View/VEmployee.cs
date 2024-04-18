@@ -42,6 +42,8 @@ namespace MVVM_ServiceAuto.View
             this.buttonLogout.Click += delegate { vm.Logout.Execute(); };
             this.buttonSaveJSON.Click += delegate { vm.SaveJSON.Execute(); };
             this.buttonSaveXML.Click += delegate { vm.SaveXML.Execute(); };
+            this.buttonSaveCSV.Click += delegate { vm.SaveCSV.Execute(); };
+            this.buttonSaveDOC.Click += delegate { vm.SaveDOC.Execute(); };
         }
 
         private void ButtonSaveJSON_Click(object? sender, EventArgs e)
