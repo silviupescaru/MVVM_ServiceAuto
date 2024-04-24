@@ -30,6 +30,7 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VEmployee));
             labelCarID = new Label();
             labelOwner = new Label();
             labelColor = new Label();
@@ -403,7 +404,9 @@
             Controls.Add(labelBrand);
             Controls.Add(labelOwner);
             Controls.Add(labelCarID);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "VEmployee";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "EmployeeGUI";
             ((System.ComponentModel.ISupportInitialize)numericUpDownCarID).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCarTable).EndInit();

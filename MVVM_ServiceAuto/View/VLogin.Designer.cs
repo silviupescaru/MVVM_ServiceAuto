@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VLogin));
             textBoxUsername = new TextBox();
             textBoxPassword = new TextBox();
             buttonLogin = new Button();
@@ -70,7 +71,9 @@
             Controls.Add(buttonLogin);
             Controls.Add(textBoxPassword);
             Controls.Add(textBoxUsername);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "VLogin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "LoginGUI";
             ResumeLayout(false);
             PerformLayout();
