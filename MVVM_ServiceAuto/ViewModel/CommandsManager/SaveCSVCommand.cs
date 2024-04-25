@@ -36,8 +36,14 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsManager
                         sb.AppendLine(string.Join(",", fields));
                     }
 
-                    File.WriteAllText("E:\\Facultate\\III\\PS\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\exports\\cars.csv", sb.ToString());
-                    MessageBox.Show("File saved successfully!");
+                    // Use SaveFileDialog to get the file path and name from the user
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "CSV file (*.csv)|*.csv";
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        File.WriteAllText(saveFileDialog.FileName, sb.ToString());
+                        MessageBox.Show("File saved successfully!");
+                    }
                 }
             }
             catch (Exception ex)

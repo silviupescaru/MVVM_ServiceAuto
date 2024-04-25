@@ -64,3 +64,5 @@ D:\Facultate\MVVM_ServiceAuto\MVVM_ServiceAuto\bin\Debug\net8.0-windows\Newtonso
 E:\Facultate\III\PS\MVVM_ServiceAuto\MVVM_ServiceAuto\bin\Debug\net8.0-windows\Xceed.Document.NET5.dll
 E:\Facultate\III\PS\MVVM_ServiceAuto\MVVM_ServiceAuto\bin\Debug\net8.0-windows\Xceed.Words.NET5.dll
 E:\Facultate\III\PS\MVVM_ServiceAuto\MVVM_ServiceAuto\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+D:\Facultate\MVVM_ServiceAuto\MVVM_ServiceAuto\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+D:\Facultate\MVVM_ServiceAuto\MVVM_ServiceAuto\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll

@@ -9,6 +9,7 @@
       "MVVM_ServiceAuto/1.0.0": {
         "dependencies": {
           "DocX": "3.0.0",
+          "DocumentFormat.OpenXml": "3.0.2",
           "Newtonsoft.Json": "13.0.3",
           "System.Data.SqlClient": "4.8.6"
         },
@@ -16,10 +17,32 @@
           "MVVM_ServiceAuto.dll": {}
         }
       },
+      "DocumentFormat.OpenXml/3.0.2": {
+        "dependencies": {
+          "DocumentFormat.OpenXml.Framework": "3.0.2"
+        },
+        "runtime": {
+          "lib/net8.0/DocumentFormat.OpenXml.dll": {
+            "assemblyVersion": "3.0.2.0",
+            "fileVersion": "3.0.2.0"
+          }
+        }
+      },
+      "DocumentFormat.OpenXml.Framework/3.0.2": {
+        "dependencies": {
+          "System.IO.Packaging": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
+            "assemblyVersion": "3.0.2.0",
+            "fileVersion": "3.0.2.0"
+          }
+        }
+      },
       "DocX/3.0.0": {
         "dependencies": {
           "System.Drawing.Common": "5.0.2",
-          "System.IO.Packaging": "4.5.0"
+          "System.IO.Packaging": "8.0.0"
         },
         "runtime": {
           "lib/net5.0/Xceed.Document.NET5.dll": {
@@ -118,7 +141,7 @@
           "Microsoft.Win32.SystemEvents": "5.0.0"
         }
       },
-      "System.IO.Packaging/4.5.0": {},
+      "System.IO.Packaging/8.0.0": {},
       "System.Security.AccessControl/4.7.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "5.0.0",
@@ -133,6 +156,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "DocumentFormat.OpenXml/3.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gqjP/BxKWgwAWwPAN+RpKaMOiidPM07F+mAxiiW184/MnkHnkk12Qo7cRB0wuq4kOZUrUzQ9EUO966hUy/wKBw==",
+      "path": "documentformat.openxml/3.0.2",
+      "hashPath": "documentformat.openxml.3.0.2.nupkg.sha512"
+    },
+    "DocumentFormat.OpenXml.Framework/3.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ILRCJu2dUJDv27ZCQDftD7AZSuBgKg+ZSUF9dg2dk8qcIED7oM42y/cvZIm0mev80nj2QMzpxthX87+AebzHug==",
+      "path": "documentformat.openxml.framework/3.0.2",
+      "hashPath": "documentformat.openxml.framework.3.0.2.nupkg.sha512"
     },
     "DocX/3.0.0": {
       "type": "package",
@@ -211,12 +248,12 @@
       "path": "system.drawing.common/5.0.2",
       "hashPath": "system.drawing.common.5.0.2.nupkg.sha512"
     },
-    "System.IO.Packaging/4.5.0": {
+    "System.IO.Packaging/8.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-OjtW5pGp1E7KE3ontBrzy+nSFJCM6pcbVDdo3gg4DauTfdtZKdeKvMVlADF4fSY+OfXWUp4qCvOSxIltt37LbA==",
-      "path": "system.io.packaging/4.5.0",
-      "hashPath": "system.io.packaging.4.5.0.nupkg.sha512"
+      "sha512": "sha512-8g1V4YRpdGAxFcK8v9OjuMdIOJSpF30Zb1JGicwVZhly3I994WFyBdV6mQEo8d3T+URQe55/M0U0eIH0Hts1bg==",
+      "path": "system.io.packaging/8.0.0",
+      "hashPath": "system.io.packaging.8.0.0.nupkg.sha512"
     },
     "System.Security.AccessControl/4.7.0": {
       "type": "package",

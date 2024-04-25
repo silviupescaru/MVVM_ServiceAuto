@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using Xceed.Document.NET;
-using Xceed.Words.NET;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Wordprocessing;
+using static System.Net.Mime.MediaTypeNames;
+using Text = DocumentFormat.OpenXml.Wordprocessing.Text;
 
 namespace MVVM_ServiceAuto.ViewModel.CommandsManager
 {
@@ -26,25 +28,39 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsManager
             {
                 if (vmManager != null)
                 {
-                    using (DocX document = DocX.Create("E:\\Facultate\\III\\PS\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\exports\\cars.docx"))
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "Word Documents (*.docx)|*.docx";
+                    saveFileDialog.DefaultExt = "docx";
+                    saveFileDialog.AddExtension = true;
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
                     {
-                        Table t = document.AddTable(vmManager.Car.Rows.Count, vmManager.Car.Columns.Count);
-
-                        for (int i = 0; i < vmManager.Car.Rows.Count; i++)
+                        using (WordprocessingDocument document = WordprocessingDocument.Create(saveFileDialog.FileName, DocumentFormat.OpenXml.WordprocessingDocumentType.Document))
                         {
-                            for (int j = 0; j < vmManager.Car.Columns.Count; j++)
+                            MainDocumentPart mainPart = document.AddMainDocumentPart();
+                            mainPart.Document = new DocumentFormat.OpenXml.Wordprocessing.Document();
+                            DocumentFormat.OpenXml.Wordprocessing.Body body = mainPart.Document.AppendChild(new DocumentFormat.OpenXml.Wordprocessing.Body());
+
+                            Table t = new Table();
+
+                            for (int i = 0; i < vmManager.Car.Rows.Count; i++)
                             {
-                                t.Rows[i].Cells[j].Paragraphs.First().Append(vmManager.Car.Rows[i][j].ToString());
+                                TableRow row = new TableRow();
+
+                                for (int j = 0; j < vmManager.Car.Columns.Count; j++)
+                                {
+                                    TableCell cell = new TableCell();
+                                    cell.Append(new Paragraph(new Run(new Text(vmManager.Car.Rows[i][j].ToString()))));
+                                    row.Append(cell);
+                                }
+
+                                t.Append(row);
                             }
+
+                            body.Append(t);
+                            document.Save();
+                            MessageBox.Show("File saved successfully!");
                         }
-
-                        document.InsertTable(t);
-                        document.Save();
-
-
-
-
-                        MessageBox.Show("File saved successfully!");
                     }
                 }
             }

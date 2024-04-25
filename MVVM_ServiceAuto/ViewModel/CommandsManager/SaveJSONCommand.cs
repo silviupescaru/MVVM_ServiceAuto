@@ -26,18 +26,25 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsManager
             {
                 if (vmManager.Car != null)
                 {
-
                     JsonSerializer serializer = new JsonSerializer
                     {
-                        Formatting = Formatting.Indented
+                        Formatting = Newtonsoft.Json.Formatting.Indented
                     };
 
-                    using (StreamWriter sw = new StreamWriter("E:\\Facultate\\III\\PS\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\exports\\cars.json"))
-                    using (JsonTextWriter writer = new JsonTextWriter(sw))
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "JSON Files (*.json)|*.json";
+                    saveFileDialog.DefaultExt = "json";
+                    saveFileDialog.AddExtension = true;
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
                     {
-                        serializer.Serialize(writer, vmManager.Car);
+                        using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName))
+                        using (JsonTextWriter writer = new JsonTextWriter(sw))
+                        {
+                            serializer.Serialize(writer, vmManager.Car);
+                        }
+                        MessageBox.Show("File saved successfully!");
                     }
-                    MessageBox.Show("File saved successfully!");
                 }
             }
             catch (Exception ex)

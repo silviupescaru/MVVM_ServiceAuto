@@ -24,12 +24,20 @@ namespace MVVM_ServiceAuto.ViewModel.CommandsEmployee
             {
                 if (vmEmployee != null)
                 {
-                    vmEmployee.Car.TableName = "Cars";
-                    vmEmployee.Car.WriteXml("E:\\Facultate\\III\\PS\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\exports\\cars.xml");
-                    MessageBox.Show("File saved successfully!");
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "XML Files (*.xml)|*.xml";
+                    saveFileDialog.DefaultExt = "xml";
+                    saveFileDialog.AddExtension = true;
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        vmEmployee.Car.TableName = "Cars";
+                        vmEmployee.Car.WriteXml(saveFileDialog.FileName);
+                        MessageBox.Show("File saved successfully!");
+                    }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }

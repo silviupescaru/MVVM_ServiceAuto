@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "bNSODIhWfQvN08g8OWMM0UUfeAJRK8C6qZ81mzgW7qgqTzEEqBnuADW5GWVMSDXxGlnQs8utqfgI4WXB9aqV3Q==",
+  "dgSpecHash": "S1B8nT/twFX67om35ZGjOUGcX+2WjrND5MiKO6EhdW7VrGyWr7lWwvQbqgDh45igWqaI4VLSwTRqpIRP9OVpsQ==",
   "success": true,
   "projectFilePath": "D:\\Facultate\\MVVM_ServiceAuto\\MVVM_ServiceAuto\\MVVM_ServiceAuto.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mike\\.nuget\\packages\\documentformat.openxml\\3.0.2\\documentformat.openxml.3.0.2.nupkg.sha512",
+    "C:\\Users\\mike\\.nuget\\packages\\documentformat.openxml.framework\\3.0.2\\documentformat.openxml.framework.3.0.2.nupkg.sha512",
     "C:\\Users\\mike\\.nuget\\packages\\docx\\3.0.0\\docx.3.0.0.nupkg.sha512",
     "C:\\Users\\mike\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\mike\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
@@ -15,7 +17,7 @@
     "C:\\Users\\mike\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\mike\\.nuget\\packages\\system.data.sqlclient\\4.8.6\\system.data.sqlclient.4.8.6.nupkg.sha512",
     "C:\\Users\\mike\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512",
-    "C:\\Users\\mike\\.nuget\\packages\\system.io.packaging\\4.5.0\\system.io.packaging.4.5.0.nupkg.sha512",
+    "C:\\Users\\mike\\.nuget\\packages\\system.io.packaging\\8.0.0\\system.io.packaging.8.0.0.nupkg.sha512",
     "C:\\Users\\mike\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\mike\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
